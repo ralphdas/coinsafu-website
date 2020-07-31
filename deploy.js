@@ -11,7 +11,7 @@ const options = {
   username: process.env.SSH_USERNAME,
   password: process.env.SSH_PASSPHRASE,
   path: './public',
-  remoteDir: '/new',
+  remoteDir: '/',
   dryRun: false,
 };
 

@@ -1,8 +1,34 @@
-import update from './update.js';
 import './scss/main.scss';
+import axios from 'axios';
 
-// even though Rollup is bundling all your files together, errors and
-// logs will still point to your original source modules
-console.log('if arie you have sourcemaps enabled in your devtools, click on main.js:5 -->');
+const modalContainerElem = document.querySelector('.csu__modal-container');
+const modalCloseElem = document.querySelector('.csu__modal-dialog-close');
+const formElem = document.querySelector('.csu__submit-form');
+const inputElem = document.querySelector('.csu__email-input');
 
-update();
+modalCloseElem.addEventListener('click', closeModal);
+formElem.addEventListener('submit', onSubmitHandler);
+
+function onSubmitHandler(event) {
+  event.preventDefault();
+  const formData = new FormData(formElem);
+  axios
+    .post('./api/mailchimp-submit.php', formData)
+    .then(data => {
+      if (data.status === 200) {
+        openModal();
+        inputElem.value = '';
+      }
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+
+function openModal() {
+  modalContainerElem.classList.remove('hidden');
+}
+
+function closeModal() {
+  modalContainerElem.classList.add('hidden');
+}

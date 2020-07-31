@@ -27,5 +27,8 @@
     "dev": "npm-run-all --parallel start watch",
     "start": "serve public",
     "deploy": "rollup -c && npx babel-node deploy.js"
+  },
+  "resolutions": {
+    "**/**/lodash": "^4.17.19"
   }
 }

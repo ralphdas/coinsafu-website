@@ -1,4 +1,9 @@
 import './scss/main.scss';
+// templates
+import './templates/index.pug';
+import './templates/buy.pug';
+import './templates/buy.pug';
+
 import axios from 'axios';
 
 const modalContainerElem = document.querySelector('.csu__modal-container');

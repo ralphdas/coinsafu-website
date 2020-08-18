@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "lory.js": "^2.5.3",
     "pug": "^3.0.0",
     "rollup-plugin-command": "^1.1.3",
     "rollup-plugin-pug": "^1.1.1"

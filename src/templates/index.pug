@@ -1,5 +1,6 @@
 include ../partials/head
-include ../partials/modal
+script(defer='' src='bundle.js')
+include ../partials/modal_home
 .csu__page-container
   include ../partials/header
   include ../partials/nav
@@ -14,20 +15,20 @@ include ../partials/modal
     p
       | With Coinsafu, your most sensitive information is hacker-proof and safe from natural
       | disasters.
-    p
-      | Save your spot for the first edition of Coinsafu. We&rsquo;ll notify you when preorders launch!
   .csu__reserve-container
     .csu__form-container
       .content-wrapper
         h1.csu__cta-header
-          | Reserve Today
+          | Keep me Notified
         h2.csu__reserve-header
           | First 210 units shipping in August
         label(for='email-input') Email Address:
         form.csu__submit-form
           .csu__input-wrapper
-            input#email-input.csu__email-input(type='email' required='' name='emailAddress' placeholder='john.doe@isp.com')
-            button.csu__submit-btn(type='submit') RESERVE NOW
+            input(type='hidden', name='status', value='subscribed')
+            input#email-input.csu__email-input(type='email' required='' name='email_address' placeholder='john.doe@isp.com')
+            .csu__btn-wrapper
+                button.csu__submit-btn(type='submit') SUBSCRIBE
   .csu__qualities-container
     .csu__qualities-row
       .list-element

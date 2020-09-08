@@ -18,6 +18,10 @@ p {
   color: #444;
   margin: 1rem 0;
   line-height: 1.6rem;
+  &.small-text {
+    font-size: 0.85rem;
+    line-height: 1rem;
+  }
 }
 label {
   font-size: 0.9rem;
@@ -77,19 +81,16 @@ a {
   display: inline-block;
 }
 .slide1 {
-  background: url('./img/slide1.jpg') center center;
+  background: url('./img/slide_1.jpg') center center;
 }
 .slide2 {
-  background: url('./img/slide2.jpg') center center;
+  background: url('./img/slide_2.jpg') center center;
 }
 .slide3 {
-  background: url('./img/slide3.jpg') center center;
+  background: url('./img/slide_3.jpg') center center;
 }
 .slide4 {
-  background: url('./img/slide4.jpg') center center;
-}
-.slide5 {
-  background: url('./img/slide5.jpg') center center;
+  background: url('./img/slide_4.jpg') center center;
 }
 
 li.js_slide {
@@ -244,7 +245,7 @@ li.js_slide {
     overflow: hidden;
   }
   &__logo {
-    width: 4rem;
+    width: 6rem;
     height: auto;
   }
   &__page-header {

@@ -10,9 +10,6 @@ include ../partials/modal_buy
         .frame.js_frame
           ul.slides.js_slides
             li.js_slide.slide1
-            li.js_slide.slide2
-            li.js_slide.slide3
-            li.js_slide.slide4
         span.js_prev.prev
           svg(xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewbox='0 0 501.5 501.5')
             g
@@ -26,9 +23,7 @@ include ../partials/modal_buy
         h3.csu__header
           | COINSAFU #1
         h4.csu__subheader
-          | Price 0.005 btc (incl. Free shipping)
-        p.csu__buy-spec_item.small
-          | Payment in Bitcoin only
+          | We are sold out, sorry!
       .csu__buy-qualities-wrapper
         h3.csu__subheader About this device
         ul.csu__buy-speclist
@@ -64,35 +59,6 @@ include ../partials/modal_buy
         .csu__form-container
           .content-wrapper
             h1.csu__cta-header
-              | Order Now
+              | Status
             h2.csu__reserve-header
-              | Get yours today
-            form.csu__submit-form
-              input(type='hidden', name='status', value='bought')
-              .csu__input-wrapper
-                label(for='email-input') Email Address [required]:
-                input#email-input.csu__email-input(type='email' required='' name='email_address' placeholder='john.doe@isp.com')
-
-              .csu__input-wrapper
-                label(for='first_name') First name:
-                input#email-input.csu__email-input(type='text'  name='first_name' placeholder='John')
-
-              .csu__input-wrapper
-                label(for='last_name') Last Name:
-                input#email-input.csu__email-input(type='text' name='last_name' placeholder='Doe')
-
-              .csu__input-wrapper
-                label(for='phone_number') Phonenumber:
-                input#email-input.csu__email-input(type='text' name='phone' placeholder='701-243-6259')
-
-              .csu__input-wrapper
-                label(for='address') Delivery Address [required]:
-                input#email-input.csu__email-input(type='text' name='address' placeholder='2299 Snowbird Lane, Chattanooga, TN 31904, USA')
-
-              .csu__input-wrapper
-                label(for='comments') Comments:
-                textarea.csu__email-input(name='comment' cols='30' rows='3')
-              .csu__btn-wrapper
-                button.csu__submit-btn(type='submit') Order Now
-              p.small-text
-                | We will do our utmost best to treat your data with care. Strong passwords and 2FA are a requirement for our employees. We will never sell your information to third parties.
+              | Sold out
